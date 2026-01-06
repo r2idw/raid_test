@@ -14,7 +14,7 @@ body {
     display: flex; 
     flex-direction: column;      
     background: #eee;
-    width: 920px;
+    width: 800px;
     border-radius: 8px;
     height: 640px;    
 }
@@ -48,9 +48,9 @@ header h1{
 
 .content { 
     display: grid;   
-    grid-template-columns: repeat(8, [column-start] 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    height: 100%;
+    grid-auto-rows: 140px;
     background: #d0d188;        
     
 }
@@ -58,45 +58,46 @@ header h1{
 .content > * { 
     background: #f1f419;        
     height: 100%;
-    grid-column: column-start / span 8;
+    grid-column: col / span 8;
+    color: #fff;
 }
 
 .my-system { 
-    grid-column: column-start / span 3;
-    grid-row: 1 / span 8;
+    grid-column: col / span 2;  
+    grid-row: 1 / span 2;
     background: #494926; 
     color: #fff;
 }
 
 .checkup { 
-   grid-column: column-start 4 / span 3;
-    grid-row: 1 / span 7;
+    grid-column: col 3 / span 2;
     background: #aaaa3c;
 }
 
 .tuneup { 
-    grid-column: column-start 7 / span 9;
-    grid-row: 1 / span 7;
+    background: #1499d6;
+    grid-column: col 4 / span 2 ;    
 }
 
+
 .update { 
-    grid-column: column-start 4 / span 3;
-    grid-row: 8;
+    grid-column: col 3 / span 2;
+    grid-row: 2;  
     background: #cc1e0e;
     
 }
 .recovery { 
-    grid-column: column-start 7;
-    grid-row: 8;
-    background: #cc1e0e;
+    grid-column: col 4;
+    grid-row: 2; 
+    background: #2550de;
   
 
 }
 .support {
-    grid-column: column-start 9;
-    grid-row: 8;
-   
-
+    grid-column: col 5;
+    grid-row: 2; 
+    background: #420e53;
 }
+
 
 
