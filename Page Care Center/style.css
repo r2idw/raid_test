@@ -17,8 +17,7 @@ body {
     width: 1110px;
     border-radius: 3px;
     overflow: hidden;
-    max-height: 740px; 
-    border: 1px solid rgb(200, 86, 86);        
+    max-height: 740px;            
 }
 
 .header { 
@@ -47,7 +46,6 @@ header h1{
     font-weight: 900;    
 }
 
-
 .content { 
     display: grid;   
     grid-template-columns: repeat(6, 1fr);
@@ -55,9 +53,7 @@ header h1{
     color: #fff;
     height: 100%;   
     text-align: center;   
-    grid-auto-rows: 150px;
-    background: #d0d188;        
-    
+    grid-auto-rows: 150px;   
 }
 
 .my-system {
@@ -65,8 +61,7 @@ header h1{
     padding: 10px;    
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    border: 1px solid #d07373;
+    align-items: center;        
     background: #A8D324;
     grid-column: span 2;
     grid-row: span 4;
@@ -168,25 +163,35 @@ header h1{
 
 .recovery {  
     display: grid; 
+    padding: 10px;
     grid-template-columns: repeat(2, 1fr); 
     background: #14B7A5;  
 }
 .recovery i {     
     font-size: 30px;
     width: 100%;
-    grid-column: span 2;
-    grid-row: span 4;    
-    background: #67d274;  
+    grid-column: span 2;     
+    
 }
 .recovery h2 {  
-    width: 100%;
+    width: 100%;   
     grid-column: span 2;    
-    background: #7e67d2;  
+   
 }
 
 .support {
+    display: grid; 
+    padding: 10px;
     background: #E697E5;
-   
+    grid-template-columns: repeat(2, 1fr);    
+}
+.support i { 
+    font-size: 30px;
+    grid-column: span 2; 
+    width: 100%;   
+}
+.support h2 {  
+    grid-column: span 2;    
 }
 
 
