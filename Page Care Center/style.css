@@ -12,15 +12,19 @@ body {
 
 .container {
     display: flex; 
-    flex-direction: column;      
+    display: grid;   
+    grid-template-areas: 'header header header header header header'
+    'content content content content content content';         
     background: #eee;
     width: 1110px;
     border-radius: 3px;
-    overflow: hidden;
+   
     max-height: 740px;            
 }
 
-.header { 
+.header {
+    display: grid; 
+    grid-area: header;
     display: flex; 
     color: #999999;
     padding: 15px;
@@ -49,7 +53,9 @@ header h1{
 .content { 
     display: grid;   
     grid-template-columns: repeat(6, 1fr);
-    gap: 8px;   
+    gap: 8px;
+    grid-column: content;
+    grid-row: 4;   
     color: #fff;
     height: 100%;   
     text-align: center;   
@@ -59,8 +65,7 @@ header h1{
 .my-system {
     display: flex;
     padding: 10px;    
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;    
     align-items: center;        
     background: #A8D324;
     grid-column: span 2;
@@ -88,8 +93,9 @@ header h1{
     font-weight: 600;
 }
 .my-system i {      
-    margin-top: 0;     
-   font-size: 110px;       
+    margin-top: 0;   
+    border: 1px solid #FFC641;  
+    font-size: 100px;       
 }
 .my-system h2 {    
    text-align: center;  
@@ -125,7 +131,7 @@ header h1{
 .tuneup {
     display: flex;    
     flex-direction: column;   
-    background: #FF5F5F;
+    background: #FF5F5F;    
     align-items: center;
     grid-column: span 2;
     padding: 10px;    
@@ -138,7 +144,7 @@ header h1{
 }
 .tuneup h2 {
     font-size: 30px;   
-    margin: 15px auto;
+    margin: 15px auto;    
 }
 
 .update {   
@@ -192,6 +198,63 @@ header h1{
 }
 .support h2 {  
     grid-column: span 2;    
+}
+
+@media (min-width: 480px) {
+    .header h1 {
+       color:  #A8D324;
+    }
+    .header i {
+       color: #999999;
+    }
+    .my-system span {        
+        height: 5%;
+    }
+    .tuneup h2 {
+        font-size: 26px;        
+    }
+    .recovery h2 {
+        font-size: 15px;        
+    }
+    .support h2 {
+        font-size: 17px;        
+    }
+
+}
+
+
+
+@media (min-width: 768px) {
+    .header > i {
+        color: #A8D324;    
+    }
+    .header .icons {
+        color: #999999;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #A8D324;
+    }
+    .header h1 {
+        color: #999999;
+    }
+    .support h2 {
+        font-size: 25px;
+    }
+    .recovery h2 {
+        font-size: 18px;
+    }
+    .my-system p {
+        margin: 20px auto;
+    }
+
+}
+@media (min-width: 890px) {  
+    .my-system p {
+       margin: 10px auto;
+    }
+    .recovery h2 {
+        font-size: 20px;
+    }    
+
 }
 
 
